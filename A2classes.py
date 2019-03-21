@@ -74,6 +74,8 @@ class salespath():
             for x in range(1,len(self.path)):
                 temp += self.path[x].locdist(self.path[x-1])
 
+            temp += self.path[0].locdist(self.path[len(self.path)-1])
+
         self.dist = temp
         return temp
 
@@ -83,7 +85,3 @@ class salespath():
                 return True
 
         return False
-
-
-
-
